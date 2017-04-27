@@ -11,10 +11,10 @@ describe("getRuleUri", () => {
     });
 
     it("returns contrib page when plugin not found", () => {
-        const result = getRuleUri("fooPlugin/test");
+        const result = getRuleUri("unknown-plugin/foo");
 
         expect(result.found).toBeFalsy();
-        expect(result.uri).toBe("https://github.com/Xapphire13/tslint-rule-documentation/blob/master/contributing.md");
+        expect(result.uri).toBe("https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md");
     });
 
     it("returns example plugin uri", () => {
