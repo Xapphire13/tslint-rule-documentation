@@ -20,7 +20,7 @@ getRuleUri("__example/foo");
 
 // If the plugin is not known, get a link to help improve this
 getRuleUri("unknown-plugin/foo");
-// => { found: true, uri: "https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md"}
+// => { found: false, uri: "https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md"}
 ```
 
 # Contributing
