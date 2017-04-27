@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Xapphire13/tslint-rule-documentation.svg?branch=master)](https://travis-ci.org/Xapphire13/tslint-rule-documentation)
 # tslint-rule-documentation
 Find the url for the documentation of a [TSLint](https://palantir.github.io/tslint/) rule
 
