@@ -22,7 +22,7 @@ export function getRuleUri(ruleId: string): IRuleResult {
     if (!uri) {
         return {
             found: false,
-            uri: "https://github.com/Xapphire13/tslint-rule-documentation/blob/master/contributing.md"
+            uri: "https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md"
         };
     }
 

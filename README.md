@@ -2,10 +2,26 @@
 Find the url for the documentation of a [TSLint](https://palantir.github.io/tslint/) rule
 
 # Install
-Coming soon
+```
+npm install --save tslint-rule-documentation
+```
 
 # Usage
-Coming soon
+```js
+const getRuleUri = require("tslint-rule-documentation").getRuleUri;
+
+// find uri for core rules
+getRuleUri("no-var-keyword");
+// => { found: true, uri: "https://palantir.github.io/tslint/rules/no-var-keyword"}
+
+// find uri for known plugins
+getRuleUri("__example/foo");
+// => { found: true, uri: "https://github.com/<user>/<repo>/blob/master/docs/foo.md"}
+
+// If the plugin is not known, get a link to help improve this
+getRuleUri("unknown-plugin/foo");
+// => { found: true, uri: "https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md"}
+```
 
 # Contributing
 If a plugin you use is _not_ in the [list of supported plugins](https://github.com/Xapphire13/tslint-rule-documentation/blob/master/src/plugins.json),
