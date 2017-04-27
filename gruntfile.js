@@ -2,7 +2,7 @@ const child_process = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const nodeModulesBinPath = "./node_modules/.bin/";
+const nodeModulesBinPath = path.resolve("node_modules/.bin");
 
 module.exports = function(grunt) {
   function tsc(project, success) {
@@ -19,10 +19,10 @@ module.exports = function(grunt) {
 
   function makeDir(dirName){
     try{
-      fs.statSync(dirName);
+      fs.statSync(path.resolve(dirName));
     } catch (err) {
       if(err.code === "ENOENT") {
-        fs.mkdirSync(dirName);
+        fs.mkdirSync(path.resolve(dirName));
       } else {
         throw err;
       }
@@ -35,11 +35,11 @@ module.exports = function(grunt) {
     grunt.log.write("Copying plugins.json... ")
     try {
       makeDir("dist")
-      fs.createReadStream("src/plugins.json").pipe(fs.createWriteStream("dist/plugins.json"));
+      fs.createReadStream(path.resolve("src/plugins.json")).pipe(fs.createWriteStream(path.resolve("dist/plugins.json")));
 
       makeDir("specTemp");
       makeDir("specTemp/src")
-      fs.createReadStream("src/plugins.json").pipe(fs.createWriteStream("specTemp/src/plugins.json"));
+      fs.createReadStream(path.resolve("src/plugins.json")).pipe(fs.createWriteStream(path.resolve("specTemp/src/plugins.json")));
     } catch (err) {
       grunt.log.error(err);
       done(false);
