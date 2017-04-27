@@ -8,7 +8,8 @@ Coming soon
 Coming soon
 
 # Contributing
-Coming soon
+If a plugin you use is _not_ in the [list of supported plugins](https://github.com/Xapphire13/tslint-rule-documentation/blob/master/src/plugins.json),
+please consider adding it to the project by following the instructions [here](https://github.com/Xapphire13/tslint-rule-documentation/blob/master/contributing.md).
 
 # API
 Coming soon

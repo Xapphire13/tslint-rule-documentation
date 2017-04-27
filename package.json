@@ -1,0 +1,31 @@
+{
+  "name": "tslint-rule-documentation",
+  "version": "1.0.0",
+  "description": "Find the url for the documentation of a TSLint rule",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xapphire13/tslint-rule-documentation.git"
+  },
+  "keywords": [
+    "tslint",
+    "rules",
+    "documentation"
+  ],
+  "author": "Steven Hobson-Campbell <xapphire13@live.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xapphire13/tslint-rule-documentation/issues"
+  },
+  "homepage": "https://github.com/Xapphire13/tslint-rule-documentation#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.14",
+    "grunt": "^1.0.1",
+    "jasmine": "^2.6.0",
+    "typescript": "^2.2.2"
+  }
+}
