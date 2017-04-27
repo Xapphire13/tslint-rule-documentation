@@ -2,11 +2,11 @@ const child_process = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const nodeModulesBinPath = path.resolve("node_modules/.bin");
+const nodeModulesPath = path.resolve("node_modules");
 
 module.exports = function(grunt) {
   function tsc(project, success) {
-    child_process.spawn(path.resolve(nodeModulesBinPath, "tsc.cmd"), ["-p", project]).on("close", (code) => {
+    child_process.spawn("node", [path.resolve(nodeModulesPath, "typescript/bin/tsc"), "-p", project]).on("close", (code) => {
       if (code < 0) {
         grunt.log.error("failed");
         success(false)
@@ -41,9 +41,9 @@ module.exports = function(grunt) {
       makeDir("dist")
       fs.createReadStream(path.resolve("src/plugins.json")).pipe(fs.createWriteStream(path.resolve("dist/plugins.json")));
 
-      makeDir("specTemp");
-      makeDir("specTemp/src")
-      fs.createReadStream(path.resolve("src/plugins.json")).pipe(fs.createWriteStream(path.resolve("specTemp/src/plugins.json")));
+      makeDir("test_temp");
+      makeDir("test_temp/src")
+      fs.createReadStream(path.resolve("src/plugins.json")).pipe(fs.createWriteStream(path.resolve("test_temp/src/plugins.json")));
     } catch (err) {
       grunt.log.error(err);
       done(false);
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask("jasmine", function () {
     const done = this.async();
-    child_process.spawn(path.resolve(nodeModulesBinPath, "jasmine.cmd"), {
+    child_process.spawn("node", [path.resolve(nodeModulesPath, "jasmine/bin/jasmine.js")], {
       stdio: "inherit"
     }).on("close", (code) => {
       if (code) {
