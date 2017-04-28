@@ -1,6 +1,8 @@
-# tslint-rule-documentation [![Build Status](https://img.shields.io/travis/Xapphire13/tslint-rule-documentation/master.svg)](https://travis-ci.org/Xapphire13/tslint-rule-documentation) [![npm](https://img.shields.io/npm/v/tslint-rule-documentation.svg)](https://www.npmjs.com/package/tslint-rule-documentation) [![npm](https://img.shields.io/npm/dt/tslint-rule-documentation.svg)](https://www.npmjs.com/package/tslint-rule-documentation)
-
+[![Build Status](https://img.shields.io/travis/Xapphire13/tslint-rule-documentation/master.svg)](https://travis-ci.org/Xapphire13/tslint-rule-documentation)
+[![npm](https://img.shields.io/npm/v/tslint-rule-documentation.svg)](https://www.npmjs.com/package/tslint-rule-documentation)
+[![npm](https://img.shields.io/npm/dt/tslint-rule-documentation.svg)](https://www.npmjs.com/package/tslint-rule-documentation)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Xapphire13/tslint-rule-documentation.svg)](https://greenkeeper.io/)
+# tslint-rule-documentation 
 Find the url for the documentation of a [TSLint](https://palantir.github.io/tslint/) rule
 
 # Install
