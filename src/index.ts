@@ -1,10 +1,19 @@
 const plugins = require("./plugins.json"); // tslint:disable-line:no-require-imports no-var-requires
 
 export interface IRuleResult {
+    /** true if the rule is a TSLint core rule, or a known plugin rule, false otherwise */
     found: boolean;
+    /** If found is true, uri of the documentation of the rule. If found is false, uri of the contribution guidelines */
     uri: string;
 }
 
+/**
+ * Get the documentation URI for the given rule ID
+ *
+ * @param ruleId {string} The ID of a TSLint rule
+ * @return {IRuleResult} with details on whether or not the rule was found,
+ * and the URI to its documentation.
+ */
 export function getRuleUri(ruleId: string): IRuleResult {
     const ruleParts = ruleId.split("/");
 
