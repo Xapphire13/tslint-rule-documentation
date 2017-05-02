@@ -28,7 +28,23 @@ If a plugin you use is _not_ in the [list of supported plugins](https://github.c
 please consider adding it to the project by following the instructions [here](https://github.com/Xapphire13/tslint-rule-documentation/blob/master/CONTRIBUTING.md).
 
 # API
-Coming soon
+### getRuleUri(ruleId: string): IRuleResult
+#### ruleId
+Type: `string`
+The ID of a [TSLint](https://palantir.github.io/tslint/) rule
+
+Examples:
+*   core rule: `no-var-keyword`
+*   plugin rule: `__example/foo`
+
+#### returns
+Type: `IRuleResult`
+```TypeScript
+interface IRuleResult {
+    found: boolean; // true if the rule is a TSLint core rule, or a known plugin rule, false otherwise
+    uri: string; // If found is true, uri of the documentation of the rule. If found is false, uri of the contribution guidelines
+}
+```
 
 # Credit
 This is based on [eslint-rules-documentation](https://github.com/jfmengels/eslint-rule-documentation), so I would like to thank the authors of that for the inspiration and code to base this on.

@@ -8,4 +8,4 @@ node_modules
 
 # Compiled output
 dist
-specTemp
+test_temp
