@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Xapphire13/tslint-rule-documentation#readme",
   "devDependencies": {
     "@types/jasmine": "^2.5.47",
-    "@types/node": "^10.0.3",
+    "@types/node": "^12.0.6",
     "grunt": "^1.0.1",
     "jasmine": "^3.0.0",
     "typescript": "^2.2.2"
